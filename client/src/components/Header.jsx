@@ -7,6 +7,7 @@ export default function Header(){
         <header>
             <a href="@"><img src={logo} alt="RateMyStudy" /></a>
             <Button/>
+            
         </header>
     )
 }
