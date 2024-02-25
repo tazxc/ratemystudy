@@ -1,0 +1,12 @@
+.entry{
+    border: none;
+    background-color: #5CABDF;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    cursor: pointer;
+    color: white;
+    border-radius: 10%;
+    font-weight: bold;
+}
