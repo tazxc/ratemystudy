@@ -4,3 +4,33 @@
     
 }
 
+.mainbg{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./img/main-bg.jpg') no-repeat center;
+    background-size: cover;
+    width: 100%;
+}
+
+
+
+.slog{
+    font-size: 30px;
+    color: white;
+    padding-top: 13rem;
+    padding-bottom: 13rem;
+    display: grid;
+    justify-content: center;
+}
+
+.search{
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    width: 100%;
+    font-size: 1rem;
+}
+
+input{
+    border: none;
+    padding: 8px;
+    outline: none;
+}
+
