@@ -21,6 +21,10 @@
     justify-content: center;
 }
 
+.slogh1{
+    padding-bottom: 15px;
+}
+
 .search{
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
