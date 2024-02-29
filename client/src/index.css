@@ -38,3 +38,7 @@ input{
     outline: none;
 }
 
+.story_main{
+    display: grid;
+    justify-content: center;
+}
