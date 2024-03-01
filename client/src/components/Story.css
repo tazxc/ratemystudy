@@ -1,12 +1,15 @@
 .task{
     display: flex;
     align-items: center;
+    width: 820px;
+    justify-content: space-between;
 }
 
 .body_task{
-    width: 230px;
+    width: 300px;
 }
 
 .body_task p{
-    font-size: 16px;
+    padding-top: 5px;
+    font-size: 18px;
 }

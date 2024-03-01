@@ -1,4 +1,5 @@
 import boys from './img/boysearch.png'
+import girl from './img/girlrev.png'
 
 export const ways = [
     {
@@ -11,5 +12,6 @@ export const ways = [
         title: 'Напишите анонимный отзыв.',
         description:
             'Поделитесь своим опытом проживания в общежитии или обучении в вузе, написав отзыв. Ваши отзывы полностью анонимны',
+        photo: girl,
     },
 ]

@@ -18,8 +18,8 @@ function App() {
         </div>
       </main>
       <section className='story_main'>
-        <Story {...ways[0]}/>
-        <Story {...ways[1]}/>
+          <Story {...ways[0]}/>
+          <Story {...ways[1]}/>
       </section>
       
     </div>  
