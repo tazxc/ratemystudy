@@ -1,9 +1,9 @@
-import './Story.css'
+import './Storys.css'
 
 
-export default function Story({title, description, photo}){
+export default function Storys({title, description, photo}){
     return(  
-            <div className='tasks'>
+            <div className='task'>
                 <div className='body_task'>
                     <h3>{title}</h3>
                     <p>{description}</p>

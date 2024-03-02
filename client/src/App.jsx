@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from './components/Header'
 import Story from './components/Story'
+import Storys from './components/Storys'
 import {ways} from './data'
 
 
@@ -19,7 +20,7 @@ function App() {
       </main>
       <section className='story_main'>
           <Story {...ways[0]}/>
-          <Story {...ways[1]}/>
+          <Storys {...ways[1]}/>
       </section>
       
     </div>  

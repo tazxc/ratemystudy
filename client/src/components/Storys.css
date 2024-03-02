@@ -1,6 +1,5 @@
-.task{
+.tasks{
     display: flex;
-    flex-direction: row-reverse;
     align-items: center;
     width: 820px;
     justify-content: space-between;
