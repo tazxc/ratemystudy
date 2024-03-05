@@ -6,7 +6,15 @@
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     cursor: pointer;
-    color: white;
     border-radius: 10%;
     font-weight: bold;
+}
+
+.entry a{
+    text-decoration: none;
+    color: white;
+}
+
+a:active{
+    color: white;
 }
