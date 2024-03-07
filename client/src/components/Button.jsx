@@ -2,7 +2,9 @@ import './Button.css'
 
 
 export default function Button(){
+    
+
     return(
-        <button className='entry'></button>
+        <button className='entry'>Вход</button>
     )
 }
