@@ -2,7 +2,7 @@
 
 const Auth = () =>{
     return (
-        <div>
+        <div className="">
             AUTH
         </div>
     )

@@ -1,3 +1,9 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+}
+
 .entry{
     border: none;
     background-color: #5CABDF;
