@@ -1,7 +1,7 @@
 import { useContext } from "react"
 import { Context } from "../index"
 import { MAIN_ROUTE } from '../utils/consts'
-import logo from '../img/logo-name.svg'
+import logo from '../pages/style/img/logo-name.svg'
 import './style/NavBar.css'
 import {observer} from 'mobx-react-lite'
 
