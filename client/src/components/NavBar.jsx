@@ -5,12 +5,14 @@ import logo from '../pages/style/img/logo-name.svg'
 import './style/NavBar.css'
 import {observer} from 'mobx-react-lite'
 
+
 const NavBar = observer(() => {
     const {user} = useContext(Context)
 
     return(
         <div className="navbar">
                 <a href={MAIN_ROUTE}><img src={logo} alt="RateMyStudy" /></a>
+
                 {user.isAuth?
                 <div>
                     <button className='entry'>Админ панель</button>
