@@ -1,5 +1,5 @@
-import boys from './img/boysearch.png'
-import girl from './img/girlrev.png'
+import boys from './pages/style/img/boysearch.png'
+import girl from './pages/style/img/girlrev.png'
 
 export const ways = [
     {

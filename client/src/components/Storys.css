@@ -1,7 +1,7 @@
 .tasks{
     display: flex;
     align-items: center;
-    width: 820px;
+    width: auto;
     justify-content: space-between;
 }
 
