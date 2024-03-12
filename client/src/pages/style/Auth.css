@@ -1,0 +1,41 @@
+.registration{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.form_registr{
+    display: flex;
+    flex-direction: column;
+    padding-top: 5px;
+}
+
+.form_registr input{
+    border: solid 1px black;
+    margin: 10px;
+    width: 250px;
+}
+
+.b_registr{
+    margin-top: 10px;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: lightgreen;
+    padding: 10px;
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.row_link{
+    text-decoration: none;
+    color: black;
+    height: 15px;
+}
