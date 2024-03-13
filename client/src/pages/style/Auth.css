@@ -3,7 +3,10 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .form_registr{
@@ -14,8 +17,11 @@
 
 .form_registr input{
     border: solid 1px black;
-    margin: 10px;
-    width: 250px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 400px;
+    height: auto;
+    font-size: 100%;
 }
 
 .b_registr{
@@ -38,4 +44,7 @@
     text-decoration: none;
     color: black;
     height: 15px;
+    font-weight: bolder;
+    
 }
+

@@ -10,7 +10,7 @@ const Auth = () =>{
 
     return (
         <div className="registration">
-            <h2>{isLogin? 'Авторизация' : 'Регистрация'}</h2>
+            <h1>{isLogin? 'Авторизация' : 'Регистрация'}</h1>
             <form action="" className='form_registr'>
                 <input type="text" name="" id="" placeholder='Введите Email'/>
                 <input type="password" name="" id="" placeholder='Введите пароль'/>
