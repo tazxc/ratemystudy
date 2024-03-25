@@ -8,7 +8,7 @@ export default class SchoolStore{
             {id: 3, name: 'Колледжи'},
         ]
         this._institution = [
-            {id: 1, name: 'КИТиС', rating: 4.5},
+            {id: 1, name: 'КИТиС', review: 6, rating: 4.5},
             {id: 2, name: 'БФУ', rating: 4.9},
             {id: 3, name: 'КГТУ', rating: 5},
             {id: 3, name: 'КГТУ', rating: 5},

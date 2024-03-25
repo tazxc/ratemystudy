@@ -1,0 +1,35 @@
+.main_schoolPage{
+    display: flex;
+    margin-top: 20px;
+    flex-direction: column;
+}
+
+.formForRev form input{
+    border: black solid 1px;
+    border-radius: 10px;
+    padding-right: 100px;
+}
+
+input{
+    font-size: medium;
+}
+
+.form_btn{
+    background-color: #5CABDF;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+.school p{
+    font-size: x-large;
+    font-weight: bold;
+    
+}
+
+.school{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
