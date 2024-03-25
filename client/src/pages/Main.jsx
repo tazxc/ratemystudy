@@ -1,3 +1,4 @@
+import SchoolList from '../components/SchoolList';
 import Story from '../components/Story';
 import Storys from '../components/Storys'
 import {ways} from '../data'
@@ -14,6 +15,7 @@ const Main = () => {
                 <Story {...ways[0]}/>
                 <Storys {...ways[1]}/>
             </div>
+            <SchoolList/>
         </section>
     )
 }
