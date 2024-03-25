@@ -1,0 +1,17 @@
+.school_item{
+    display: flex;
+    padding: 10px;
+}
+
+.school_card{
+    width: 150px;
+    cursor: pointer;
+    border: grey solid 1px;
+}
+
+.about_item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2px;
+}

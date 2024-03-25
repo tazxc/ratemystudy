@@ -1,3 +1,10 @@
+.school_map{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 60%;
+}
+
 .school_list{
     display: flex;
+    justify-content: center;
 }
