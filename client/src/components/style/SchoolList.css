@@ -1,7 +1,9 @@
 .school_map{
     display: flex;
     flex-wrap: wrap;
-    max-width: 60%;
+    max-width: 100%;
+    justify-content: center;
+    margin-top: 10px;
 }
 
 .school_list{

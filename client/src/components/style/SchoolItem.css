@@ -1,10 +1,12 @@
-.school_item{
+/* .school_item{
     display: flex;
     padding: 10px;
+    box-sizing: border-box;
 }
 
 .school_card{
     width: 150px;
+    height: 150px;
     cursor: pointer;
     border: grey solid 1px;
 }
@@ -14,4 +16,36 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 2px;
+}
+
+.school_card img{
+    width: -webkit-fill-available;
+} */
+
+
+.schoolItem{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    border: black 1px solid ;
+    cursor: pointer;
+    max-width: 20%;
+    min-width: 250px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.schoolItem img{
+    overflow: hidden;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    max-height: 70%;
+}
+
+.aboutItem{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    border: black 1px solid;
 }

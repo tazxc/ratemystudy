@@ -4,7 +4,7 @@
     flex-direction: column;
 }
 
-.formForRev form input{
+.rev_input{
     border: black solid 1px;
     border-radius: 10px;
     padding-right: 100px;
@@ -20,6 +20,8 @@ input{
     color: white;
     cursor: pointer;
     border: none;
+    border-radius: 10px;
+    margin: 10px;
 }
 
 .school p{
@@ -31,5 +33,13 @@ input{
 .school{
     display: flex;
     align-items: center;
-    flex-direction: column;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.formForRev{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
 }
