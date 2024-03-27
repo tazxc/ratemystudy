@@ -21,7 +21,7 @@ const SchoolPage = () =>{
             <div className="allReview">
                 <div className="AllScore">
                     <div className="score">4.5</div>
-                    <div>Rating school</div>
+                    
                 </div>
                 <div className="review">
                     <div className="reviewCommit">

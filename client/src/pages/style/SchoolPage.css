@@ -59,3 +59,10 @@ input{
     width: 45%;
     padding: 40px;
 }
+
+.score{
+    background-color: #36d855;
+    max-width: 40px;
+    padding: 10px;
+    border-radius: 5px;
+}
