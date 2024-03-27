@@ -1,0 +1,21 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    margin-top: 25px;
+    --tw-bg-opacity: 1;
+    background-color: rgba(243,244,246,var(--tw-bg-opacity));
+}
+
+.footerLink a{
+    padding: 20px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.footerLogo{
+    margin-bottom: 20px;
+}
