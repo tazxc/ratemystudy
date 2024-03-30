@@ -1,5 +1,6 @@
 import React from "react";
 import './style/SchoolPage.css'
+import Review from "../components/Review";
 
 
 const SchoolPage = () =>{
@@ -18,20 +19,7 @@ const SchoolPage = () =>{
                 </form>
             </div>
             
-            <div className="allReview">
-                <div className="AllScore">
-                    <div className="score">4.5</div>
-                    
-                </div>
-                <div className="review">
-                    <div className="reviewCommit">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium animi id, autem debitis qui vitae, 
-                            eius molestias consectetur, 
-                            quia culpa ea unde minima veritatis inventore doloremque odit rem dignissimos? Molestiae!</p>
-                    </div>
-                </div>
-                
-            </div>
+            <Review/>
         </div>
     )
 }
