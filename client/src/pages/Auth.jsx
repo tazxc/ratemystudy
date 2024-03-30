@@ -11,9 +11,9 @@ const Auth = () =>{
     return (
         <div className="registration">
             <h1>{isLogin? 'Авторизация' : 'Регистрация'}</h1>
-            <form action="" className='form_registr'>
-                <input type="text" name="" id="" placeholder='Введите Email'/>
-                <input type="password" name="" id="" placeholder='Введите пароль'/>
+            {isLogin? <form action="http://Server/login.php" method='POST' className='form_registr'>
+                <input type="text" name="email" id="" placeholder='Введите Email'/>
+                <input type="password" name="password" id="" placeholder='Введите пароль'/>
                 <div className='row'>
                     {isLogin ?
                     <a href={REGISTRATION_ROUTE} className='row_link'>Регистрация</a>
@@ -27,6 +27,25 @@ const Auth = () =>{
                 </div>
                 
             </form>
+            :
+            <form action="http://Server/registration.php" method='POST' className='form_registr'>
+                <input type="text" name="email" id="" placeholder='Введите Email'/>
+                <input type="password" name="password" id="" placeholder='Введите пароль'/>
+                <div className='row'>
+                    {isLogin ?
+                    <a href={REGISTRATION_ROUTE} className='row_link'>Регистрация</a>
+                    :
+                    <a href={LOGIN_ROUTE} className='row_link'>Войти</a>
+                    }
+                    {isLogin? 
+                    <button className='b_registr'>Войти</button>
+                    :
+                    <button className='b_registr'>Регистрация</button>}
+                </div>
+            </form>}
+                
+            
+            
         </div>
     )
 }
