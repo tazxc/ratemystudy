@@ -1,4 +1,4 @@
-import Footer from '../components/Footer';
+
 import SchoolList from '../components/SchoolList';
 import Story from '../components/Story';
 import Storys from '../components/Storys'
@@ -17,7 +17,7 @@ const Main = () => {
                 <Storys {...ways[1]}/>
             </div>
             <SchoolList/>
-            <Footer/>
+            
         </section>
     )
 }

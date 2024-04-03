@@ -2,15 +2,18 @@ import React from 'react'
 import {BrowserRouter} from 'react-router-dom'
 // import {ways} from './data'
 import AppRouter from './components/AppRouter'
-import NavBar from './components/NavBar';
+import NavBar from './components/NavBar'
+import Footer from './components/Footer'
 
 
 function App() {
+  
   return (
     <BrowserRouter>
       
       <NavBar/>
       <AppRouter/>
+      {/* <Footer/> */}
       
       
       

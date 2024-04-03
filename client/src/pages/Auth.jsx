@@ -21,7 +21,8 @@ const Auth = () =>{
                     <a href={LOGIN_ROUTE} className='row_link'>Войти</a>
                     }
                     {isLogin? 
-                    <button className='b_registr'>Войти</button>
+                    <button 
+                        className='b_registr'>Войти</button>
                     :
                     <button className='b_registr'>Регистрация</button>}
                 </div>

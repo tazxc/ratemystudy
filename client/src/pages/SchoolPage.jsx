@@ -6,8 +6,12 @@ import {FaStar} from 'react-icons/fa'
 
 const SchoolPage = () =>{
     const school = {id: 1, name: 'КИТиС', review: 26, rating: 4.5, img: 'https://сопк.рф/wp-content/uploads/2019/12/Kolledzh-informatsionnyh-tehnologij-i-stroitelstva-Kaliningrad.jpg'}
+    
     const [rating, setRating] = useState(null)
     const [hover, setHover] = useState(null)
+    
+    
+    
     return(
 
         <div class="container-fluid">
@@ -22,9 +26,9 @@ const SchoolPage = () =>{
             </div>
                 <form action="http://Server/school.php" method="POST" class="mt-4 d-flex justify-content-center align-items-center flex-column">
                     <div class="form-group ">
-                        <textarea name="review" placeholder="Отставить отзыв" class="form-control" id="exampleFormControlTextarea1" rows="5" cols="100"></textarea>
+                        <textarea name="review" placeholder="Отставить отзыв" class="form-control" id="exampleFormControlTextarea1" rows="5" cols="100" required></textarea>
                     </div>
-                    <div class="d-flex">
+                    <div class="d-flex mt-3">
                         {[...Array(5)].map((star, index) => {
                             const currentRating = index + 1 
                             return (
@@ -33,6 +37,7 @@ const SchoolPage = () =>{
                                     name="rating"
                                     value={currentRating}
                                     onClick={()=> setRating(currentRating)}
+                                    required
                                     />
                                     <FaStar 
                                         className="star" 

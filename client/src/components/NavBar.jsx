@@ -17,31 +17,13 @@ const NavBar = observer(() => {
                 <a href=""><h2>Университеты</h2></a> */}
                 {user.isAuth?
                 <div>
-                    <button className='entry'>Админ панель</button>
+                    <button className='entry' formMethod="POST" formAction="http://Server/out.php">Выйти</button>
                 </div>
                 :
                 <div>
                     <button className='entry' onClick={() => user.setIsAuth(true)}>Войти</button>
                 </div>}
         </div>
-
-
-
-
-    //     <div className="navbar">
-    //         <div>
-    //             <a href={MAIN_ROUTE}><img src={logo} alt="RateMyStudy" /></a>
-    //             {user.isAuth?
-    //             <button className='entry'>Вход</button>
-    //         </div>
-    //         :
-    //         <div>
-    //             <a href={MAIN_ROUTE}><img src={logo} alt="RateMyStudy" /></a>
-    //             {user.isAuth ?
-    //             <button className='entry'>Вход</button>
-    //         </div>
-    //         }
-    //    </div>
     )
 })
 
