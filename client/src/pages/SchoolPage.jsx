@@ -7,7 +7,7 @@ import { useParams } from "react-router-dom";
 
 const SchoolPage = () =>{
 
-    const [data, setData] = useState(null)
+    const [data, setData] = useState([])
     const {id} = useParams()
     
     useEffect(() => { 
@@ -18,7 +18,7 @@ const SchoolPage = () =>{
             },
         })
         .then(response => response.json())
-        .then(setData)
+        .then(result => setData(result))
         
     },[]);
     
@@ -31,13 +31,15 @@ const SchoolPage = () =>{
     const currentUrl = window.location.href
     
     return(
-
+        
         <div class="container-fluid">
             <div class="row">
             <div className="school">
-                 <div className="nameSchool"><h1></h1></div>
-                <p>Оценка: {school.rating}</p>
-                <h2>Всего отызвов: {school.review}</h2>
+                 <div className="nameSchool"> 
+                    <h2>{data.fullName}</h2>
+                 </div>
+                <p>Оценка: {data.rating}</p>
+                <h2>Всего отызвов: {data.allView}</h2>
             </div>
             
             
