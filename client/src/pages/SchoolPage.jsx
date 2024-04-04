@@ -7,10 +7,10 @@ import { useParams } from "react-router-dom";
 
 const SchoolPage = () =>{
 
+    const [data, setData] = useState(null)
     const {id} = useParams()
-    console.log(id)
-    function getSchool(){
-        console.log(id)
+    
+    useEffect(() => { 
         fetch(`http://Server/getSchool.php?id=${id}`, {
             method : 'GET',
             headers : {
@@ -18,15 +18,11 @@ const SchoolPage = () =>{
             },
         })
         .then(response => response.json())
-        .then(data => console.log(data))
-        .catch(error => console.error(error))
-    }
+        .then(setData)
+        
+    },[]);
     
-    useEffect(() => { 
-        getSchool()
-    });
-
-
+    
     const school = {id: 1, name: 'КИТиС', review: 26, rating: 4.5, img: 'https://сопк.рф/wp-content/uploads/2019/12/Kolledzh-informatsionnyh-tehnologij-i-stroitelstva-Kaliningrad.jpg'}
     
     const [rating, setRating] = useState(null)
@@ -39,7 +35,7 @@ const SchoolPage = () =>{
         <div class="container-fluid">
             <div class="row">
             <div className="school">
-                 <div className="nameSchool"><h1>{school.name}</h1></div>
+                 <div className="nameSchool"><h1></h1></div>
                 <p>Оценка: {school.rating}</p>
                 <h2>Всего отызвов: {school.review}</h2>
             </div>
