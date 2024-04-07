@@ -9,7 +9,7 @@ const SchoolPage = () =>{
 
     const [data, setData] = useState([])
     const {id} = useParams()
-    
+   
     useEffect(() => { 
         fetch(`http://Server/getSchool.php?id=${id}`, {
             method : 'GET',
@@ -21,9 +21,6 @@ const SchoolPage = () =>{
         .then(result => setData(result))
         
     },[]);
-    
-    
-    const school = {id: 1, name: 'КИТиС', review: 26, rating: 4.5, img: 'https://сопк.рф/wp-content/uploads/2019/12/Kolledzh-informatsionnyh-tehnologij-i-stroitelstva-Kaliningrad.jpg'}
     
     const [rating, setRating] = useState(null)
     const [hover, setHover] = useState(null)
