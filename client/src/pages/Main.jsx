@@ -9,13 +9,15 @@ import './style/Main.css'
 import { useContext, useEffect } from 'react';
 import { Context } from '..';
 import { fetchSchools } from '../http/schoolAPI';
+import SchoolSearch from '../components/SchoolSearch';
+
+
 
 
 const Main = observer(() => {
     const {school} = useContext(Context)
     useEffect(() => {
         fetchSchools().then(data => school.setInstitution(data))
-        console.log(school)
     }, [])
 
 
@@ -23,7 +25,14 @@ const Main = observer(() => {
         <section>
             <div className='search_school'>
                 <h2>Найдите свою школу</h2>
-                <input type="text" placeholder='введите навзвание вашей школы...' className='input_serchS'/>
+                <input 
+                    type="text" 
+                    placeholder='введите навзвание вашей школы...' 
+                    className='input_serchS'
+                    
+                    />
+                <SchoolSearch/>
+                
             </div>
             
             <div className='story'>
