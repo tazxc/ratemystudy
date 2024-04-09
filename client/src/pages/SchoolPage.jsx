@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import './style/SchoolPage.css'
 import Review from "../components/Review";
 import {FaStar} from 'react-icons/fa'
 import { useParams } from "react-router-dom";
+import { Context } from "..";
 
 
 const SchoolPage = () =>{
@@ -74,8 +75,9 @@ const SchoolPage = () =>{
                     <button type="submit" class="btn btn-outline-success mt-3">Отправить</button>
                 </form>
             
-
-            <Review/>
+            
+                <Review/>
+            
         </div>
     )
 }

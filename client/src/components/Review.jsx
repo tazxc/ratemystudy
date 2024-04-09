@@ -20,7 +20,7 @@ const Review = () =>{
 
     return(
         <div className="allReview">
-                <div className="AllScore">
+                {/* <div className="AllScore">
                     {data.map(review =>
                         <div className="score" key={review.id}>{review.rating}</div>
                     )}
@@ -33,7 +33,7 @@ const Review = () =>{
                         )}
                     </div>
                 
-                </div>
+                </div> */}
                 
             </div>
     )

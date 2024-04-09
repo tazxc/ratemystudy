@@ -12,7 +12,7 @@ const SchoolList = observer(() =>{
         <div className="school_list">
             <div className="school_map">
                 {school.institution.map(institution =>
-                <SchoolItem key={institution.id} institution={institution}/>
+                <SchoolItem key={institution.id}/>
 
                 )}
             </div>
