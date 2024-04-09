@@ -53,6 +53,7 @@ input{
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 
 .review{
@@ -62,10 +63,19 @@ input{
 
 .score{
     background-color: #36d855;
-    max-width: 40px;
+    max-width: 30px;
     padding: 10px;
     border-radius: 5px;
+    margin-bottom: 10px;
 }
+
+.reviewCommit p{
+    word-wrap: break-word;
+}
+
+/* .AllScore{
+    padding-bottom: 10px;
+} */
 
 input[type=radio]{
     display: none;

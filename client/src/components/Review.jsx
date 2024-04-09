@@ -1,18 +1,38 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
 const Review = () =>{
+
+    const [data, setData] = useState([])
+    const {id} = useParams()
+   
+    useEffect(() => { 
+        fetch(`http://Server/getViews.php?id=${id}`, {
+            method : 'GET',
+            headers : {
+                'Content-Type' : 'application/json'
+            },
+        })
+        .then(response => response.json())
+        .then(result => setData(result))
+        
+    },[]);
+
     return(
         <div className="allReview">
                 <div className="AllScore">
-                    <div className="score">4.5</div>
-                    
-                </div>
+                    {data.map(review =>
+                        <div className="score" key={review.id}>{review.rating}</div>
+                    )}
+                    </div>
+                
                 <div className="review">
                     <div className="reviewCommit">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium animi id, autem debitis qui vitae, 
-                            eius molestias consectetur, 
-                            quia culpa ea unde minima veritatis inventore doloremque odit rem dignissimos? Molestiae!</p>
+                        {data.map(review =>
+                        <p key={review.id}>{review.review}</p>
+                        )}
                     </div>
+                
                 </div>
                 
             </div>
