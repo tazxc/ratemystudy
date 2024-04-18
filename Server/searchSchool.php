@@ -1,31 +1,19 @@
 <?php
-header("Access-Control-Allow-Origin: *");
 require_once __DIR__.'/boot.php';
 
+// Получение введенного пользователем запроса
+$query = isset($_GET['query']) ? $_GET['query'] : '';
 
-    
-    $query = $_GET['query'];
-    
-    if(strlen($query) == 0){
-        $stmt = pdo()->prepare("SELECT * FROM school");
-        $stmt -> execute();
-        $schools = [];
-        while ($row = $stmt->fetch()) {
-            $schools[] = $row;
-        
-        }
-    
-            echo json_encode($schools);
+// Поиск школ в базе данных
+$stmt = pdo()->prepare("SELECT name FROM school WHERE name LIKE :query LIMIT 3");
+$stmt->execute(array(':query' => "%$query%"));
+$schools = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-        }else{
-        $schools = [];
-        $stmt = pdo()->prepare("SELECT * FROM school WHERE name LIKE CONCAT('%', ?, '%')");
-        $stmt->execute([$query]);
-    
-        $schools[] = $stmt->fetchAll();
-    
-        echo json_encode($schools);
-    }
+// Возвращаем результат в формате JSON
+header('Content-Type: application/json');
+echo json_encode($schools);
+?>
+
     
     
     
