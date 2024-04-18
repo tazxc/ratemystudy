@@ -31,7 +31,7 @@ const Main = observer(() => {
                     className='input_serchS'
                     
                     />
-                {/* <SchoolSearch/> */}
+                <SchoolSearch/>
                 
             </div>
             

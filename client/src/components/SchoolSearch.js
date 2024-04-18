@@ -1,62 +1,31 @@
-import React, { Component} from 'react';
+import React, { useState } from 'react';
 
-class SchoolSearch extends Component {
-    constructor(props) {
-        super(props);
+const SchoolSearch = () => {
+  const [query, setQuery] = useState('');
+  const [schools, setSchools] = useState([]);
 
-        this.state = {
-            schools: [],
-            query: ' '
-        };
-    }
-    
-    componentDidMount() {
-        // Получить первые 3 школы из БД
-        fetch(`http://Server/searchSchool.php?query=`)
-            .then(response => response.json())
-            .then(({ schools }) => {
-                this.setState({ schools: schools});
-            });
-    }
+  const handleSearch = async (event) => {
+    const userInput = event.target.value;
+    setQuery(userInput);
 
-    handleQueryChange = (event) => {
-        const { schools } = this.state;
-        const query = event.target.value;
+    // Здесь можно добавить логику для отправки запроса на сервер с помощью fetch или axios
 
-        if (query.length == 0) {
-            this.setState({
-                schools: schools
-            }); 
-            console.log(schools) 
-        } else {
-            const filteredSchools = schools.filter(school => {
-                return school.name.toLowerCase().includes(query.toLowerCase());
-            });
-            this.setState({ 
-                schools: filteredSchools
-            });
-            console.log(schools.name) 
-        }
+    // Пример запроса на бэкенд
+    const response = await fetch(`http://server/searchSchool.php?query=${userInput}`);
+    const data = await response.json();
+    setSchools(data);
+  };
+
+  return (
+    <div>
+      <input type="text" value={query} onChange={handleSearch} placeholder="Поиск школы..." />
+      <ul>
+        {schools.map((school, index) => (
+          <li key={index}>{school.name}</li>
+        ))}
+      </ul>
+    </div>
+  );
 };
 
-render() {
-    
-        return (
-            <div >
-                <input
-                    type="text"
-                    placeholder="Поиск школы..."
-                    defaultValue={this.state.query}
-                    onChange={this.handleQueryChange}
-                
-                />
-                <ul>
-                    {this.state.schools.map(school => (
-                        <li key={school.id}>{school.fullName}</li>
-                    ))}
-                </ul>
-            </div>
-        );}
-    
-}
-export default SchoolSearch;
+export default SchoolSearch
