@@ -23,7 +23,7 @@ const Main = observer(() => {
 
     return(
         <section>
-            <div className='search_school'>
+            {/* <div className='search_school'>
                 <h2>Найдите свою школу</h2>
                 <input 
                     type="text" 
@@ -31,9 +31,10 @@ const Main = observer(() => {
                     className='input_serchS'
                     
                     />
-                <SchoolSearch/>
                 
-            </div>
+                
+            </div> */}
+            <SchoolSearch/>
             
             <div className='story'>
                 <Story {...ways[0]}/>
