@@ -11,15 +11,18 @@
 }
 
 .list{
-    width: 42%;
-    padding-top: 2px;
-    margin-right: 2rem;
+    width: 40%;
+    padding-left: 0 !important;
 }
 
 .schoolLi{
+    font-size: large;
     padding: 5px;
     cursor: pointer;
-    border-radius: 10px;
     list-style-type: none;
     background-color: white;
 }
+
+
+  
+  
