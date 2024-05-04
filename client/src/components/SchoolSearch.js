@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../pages/style/SchoolSearch.css'
+import { useNavigate } from 'react-router-dom';
 
 const SchoolSearch = () => {
   const [query, setQuery] = useState('');
@@ -14,12 +15,25 @@ const SchoolSearch = () => {
     setSchools(data);
   };
 
+  const history = useNavigate()
+
+  const schoolClick = (schoolId) =>{
+    history(`/school/${schoolId}`)
+  }
+
+
   return (
     <div className='search_school'>
       <input className='input_serchS' type="text" value={query} onChange={handleSearch} placeholder="Поиск школы..." />
-      <ul>
+      <ul className='list'>
         {schools.map((school, index) => (
-          <li className='schoolLi' key={index}>{school.name}</li>
+          <li 
+            className='schoolLi' 
+            key={index}
+            onClick = {() => schoolClick(school.id)}
+            >
+              {school.fullName}
+          </li>
         ))}
       </ul>
     </div>
