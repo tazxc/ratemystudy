@@ -1,4 +1,4 @@
-import { useContext } from "react"
+import { useContext, useEffect, useState } from "react"
 import { Context } from "../index"
 import { MAIN_ROUTE } from '../utils/consts'
 import logo from '../pages/style/img/logo-name.svg'
@@ -9,19 +9,26 @@ import {observer} from 'mobx-react-lite'
 const NavBar = observer(() => {
     const {user} = useContext(Context)
 
+    const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem('user_id') !== null)
+
+    const handleLogout = () =>{
+        localStorage.removeItem('user_id')
+        setIsLoggedIn(false)
+    }
+
     return(
         <div className="navbar">
                 <a href={MAIN_ROUTE}><img src={logo} alt="RateMyStudy" /></a>
                 {/* <a href=""><h2>Школы</h2></a>
                 <a href=""><h2>Колледжи</h2></a>
                 <a href=""><h2>Университеты</h2></a> */}
-                {user.isAuth?
+                {isLoggedIn?
                 <div>
-                    <button className='entry' formMethod="POST" formAction="http://Server/out.php">Выйти</button>
+                    <button className='entry' onClick={handleLogout}>Выйти</button>
                 </div>
                 :
                 <div>
-                    <button className='entry' onClick={() => user.setIsAuth(true)}>Войти</button>
+                    <button className='entry' onClick={() => window.location.href = 'http://localhost:3000/login'}>Войти</button>
                 </div>}
         </div>
     )
