@@ -17,25 +17,36 @@ const Review = () =>{
         .then(result => setData(result))
         
     },[]);
-
     return(
-        <div className="allReview">
-                <div className="AllScore">
-                    {data.map(review =>
-                        <div className="score" key={review.id}>{review.rating}</div>
-                    )}
-                    </div>
+        // <div className="allReview">
+        //         <div className="AllScore">
+        //             {data.map(review =>
+        //                 <div className="score" key={review.id}>{review.rating}</div>
+        //             )}
+        //             </div>
                 
-                <div className="review">
-                    <div className="reviewCommit">
-                        {data.map(review =>
-                        <p key={review.id}>{review.review}</p>
-                        )}
-                    </div>
+        //         <div className="review">
+        //             <div className="reviewCommit">
+        //                 {data.map(review =>
+        //                 <p key={review.id}>{review.review}</p>
+        //                 )}
+        //             </div>
                 
+        //         </div>
+                
+        //     </div>
+
+        <div className="main_review">
+            <div className="reviews-container">
+                {data.map(review => (
+                <div className="review-item" key={review.id}>
+                    <div className={`score rating-${review.rating}`}>{review.rating}</div>
+                    <p className="review">{review.review}</p>
                 </div>
-                
+                ))}
             </div>
+        </div>
+
     )
 }
 
