@@ -1,5 +1,6 @@
 <?php
 
+session_start();
 require_once __DIR__.'/boot.php';
 
 
@@ -24,7 +25,9 @@ if (password_verify($_POST['password'], $user['password'])) {
             'password' => $newHash,
         ]);
     }
+    
     $_SESSION['user_id'] = $user['id'];
+    
 
     header('Location: http://localhost:3000/');
-}
+} 

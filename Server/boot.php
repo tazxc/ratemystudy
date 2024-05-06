@@ -1,6 +1,6 @@
 <?php
-
 session_start();
+
 
 
 header('Access-Control-Allow-Origin: *');
@@ -22,20 +22,10 @@ function pdo(){
     return $pdo;
 }
 
-function check_auth(): bool{
-    return !!($_SESSION['user_id'] ?? false);
-}
 
-function generateToken($userId){
-    $expiresIn = 60 * 60; 
-    $currentTime = time();
-    $expireTime = $currentTime + $expiresIn;
 
-    $token = bin2hex(random_bytes(20));
-
-    $data = array(
-        'token' => $token,
-    );
-
-    echo json_encode($data);
+// Функция для проверки аутентификации пользователя
+function check_auth() {
+    
+    return isset($_SESSION['user_id']);
 }
