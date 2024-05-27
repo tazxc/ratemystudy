@@ -24,8 +24,8 @@ const SchoolSearch = () => {
 
   return (
     <div className='search_school'>
-      <input className='input_serchS' type="text" value={query} onChange={handleSearch} placeholder="Поиск школы..." />
-      <ul className='list'>
+      <input className='input_serchS w-75' type="text" value={query} onChange={handleSearch} placeholder="Поиск школы..." />
+      <ul className='text-left absolute top-10 rounded-t-none rounded-b-2xl shadow bg-white divide-y w-full max-h-40 overflow-auto w-75'>
         {schools.map((school, index) => (
           <li 
             className='schoolLi' 
