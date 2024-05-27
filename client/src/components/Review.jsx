@@ -37,11 +37,11 @@ const Review = () =>{
         //     </div>
 
         <div className="main_review">
-            <div className="reviews-container">
+            <div className="reviews-container container">
                 {data.map(review => (
                 <div className="review-item" key={review.id}>
                     <div className={`score rating-${review.rating}`}>{review.rating}</div>
-                    <p className="review">{review.review}</p>
+                    <p className="review text-center">{review.review}</p>
                 </div>
                 ))}
             </div>
