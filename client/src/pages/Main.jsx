@@ -25,9 +25,12 @@ const Main = observer(() => {
         <section>
             <SchoolSearch/>
             
-            <div className='story'>
-                <Story {...ways[0]}/>
-                <Storys {...ways[1]}/>
+            <div className='container'>
+                <div className='row '>
+                    <Story {...ways[0]}/>
+                    <Storys {...ways[1]}/>
+                </div>
+                
             </div>
             <SchoolList/>
             <Footer/>
