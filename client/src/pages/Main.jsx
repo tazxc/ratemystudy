@@ -23,17 +23,6 @@ const Main = observer(() => {
 
     return(
         <section>
-            {/* <div className='search_school'>
-                <h2>Найдите свою школу</h2>
-                <input 
-                    type="text" 
-                    placeholder='введите навзвание вашей школы...' 
-                    className='input_serchS'
-                    
-                    />
-                
-                
-            </div> */}
             <SchoolSearch/>
             
             <div className='story'>

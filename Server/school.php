@@ -54,14 +54,14 @@ require_once __DIR__.'/boot.php';
    
     
     
-    // Получаем данные отзыва из POST-запроса и сохраняем в базу данных
+    
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        // Получение данных из тела запроса в формате JSON
+        
         $json = file_get_contents('php://input');
-        // Декодирование JSON-данных в ассоциативный массив
+        
         $data = json_decode($json, true);
     
-        // Проверка наличия необходимых данных
+        
         if (isset($data['review'], $data['rating'], $data['schoolId'])) {
             $url = $data['schoolId'];
             $parts = parse_url($url);

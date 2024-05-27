@@ -19,9 +19,6 @@ const NavBar = observer(() => {
     return(
         <div className="navbar">
                 <a href={MAIN_ROUTE}><img src={logo} alt="RateMyStudy" /></a>
-                {/* <a href=""><h2>Школы</h2></a>
-                <a href=""><h2>Колледжи</h2></a>
-                <a href=""><h2>Университеты</h2></a> */}
                 {isLoggedIn?
                 <div>
                     <button className='entry' onClick={handleLogout}>Выйти</button>
