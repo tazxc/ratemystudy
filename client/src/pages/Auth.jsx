@@ -45,11 +45,11 @@ const Auth = () =>{
             <form onSubmit={handleSubmit} className='w-50'>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
+                    <input type="email" class="form-control" id="exampleInputEmail1" name='email' aria-describedby="emailHelp"/>
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Пароль</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1"/>
+                    <input type="password" class="form-control" id="exampleInputPassword1" name='password'/>
                 </div>
                 <div className=''>
                     {isLogin ? <a href={REGISTRATION_ROUTE} className='row_link'>Регистрация</a> : <a href={LOGIN_ROUTE} className='row_link'>Войти</a>}

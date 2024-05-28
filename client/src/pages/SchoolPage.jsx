@@ -64,7 +64,6 @@ const SchoolPage = () =>{
                         <h2>{data.fullName}</h2>
                     </div>
                     <p>Оценка: {data.rating}</p>
-                    <h2>Всего отзывов: {data.allView}</h2>
                 </div>
             </div>
             <form onSubmit={handleSubmitReview} className="mt-4 d-flex justify-content-center align-items-center flex-column">
@@ -106,7 +105,7 @@ const SchoolPage = () =>{
                 {reviewSubmitted && <p className="revOk">Отзыв успешно отправлен!</p>}
                 <button type="submit" className="btn btn-outline-success mt-3">Отправить</button>
             </form>
-            
+            <h4 className="pt-3 d-flex justify-content-center">Всего отзывов: {data.allView}</h4>
             <Review/>
         </div>
     );
